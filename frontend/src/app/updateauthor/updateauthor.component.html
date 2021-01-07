@@ -1,0 +1,140 @@
+<style>
+    #masthead {
+    min-height:199px;
+    background-image: url(assets/images/img9.jpg) !important;
+  
+    /* background-color:#004403; */
+    color:#aaaacc;
+  }
+  </style>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Update Author
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            <div class="registration-form">
+              <form class="login" (ngSubmit)="editAuthor()">
+                  <div class="form-group">
+                    <h3>Please Change this form to update author details.</h3>
+                  </div>
+                 <br>
+                      <div class="form-group">
+                    
+                    <input type="text" name="author" class="form-control item" id="FirstName" [(ngModel)]="authoritem.authorname" placeholder="Name of the Author">
+                   
+                    <label id="FirstName1"></label>
+                  </div>
+                  <div class="form-group">
+                    
+                    <input type="text" name="genere" class="form-control item" id="LastName" [(ngModel)]="authoritem.genre" placeholder="Author Genres">
+                  
+                    <label id="LastName1"></label>
+                  </div>
+                  <!-- <div class="form-group">
+                    
+                    <input type="text" name="discription" class="form-control item" id="LastName" [(ngModel)]="authoritem.description" placeholder="Details about Author">
+                  
+                    <label id="LastName1"></label>
+                  </div> -->
+                  <div class="form-group">
+                    
+                    <input type="text" name="book1" class="form-control item" id="book1" [(ngModel)]="authoritem.book1" placeholder="Author Book 1">
+                  
+                    <label id="book11"></label>
+                  </div>
+                  <div class="form-group">
+                    
+                    <input type="text" name="book2" class="form-control item" id="LastName" [(ngModel)]="authoritem.book2" placeholder="Author Book 2">
+                  
+                    <label id="book21"></label>
+                  </div>
+                  <div class="form-group">
+                    
+                    <input type="text" name="book3" class="form-control item" id="LastName" [(ngModel)]="authoritem.book3" placeholder="Author Book 3">
+                  
+                    <label id="book31"></label>
+                  </div>
+                  <div class="form-group">
+                  <label>Insert an Image URL</label>
+                  <input type="text" name="image" class="form-control item"[(ngModel)]="authoritem.imageUrl"  id="img" >
+                    
+                  
+                    <label id="imgback1"></label>
+                  </div>
+                      
+                  <div class="form-group"> 
+                      <div class="botton">
+                          <button type="submit" class="btn btn-block create-account" id="loginBtn">Update Author</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            
+            
+            
+              
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>
+  
+  <div class="container" id="footer">
+    <div class="row">
+      <div class="col col-sm-12">
+        
+        <h1>Follow Us</h1>
+        <div class="btn-group">
+         <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+         <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+         <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <hr>
+  

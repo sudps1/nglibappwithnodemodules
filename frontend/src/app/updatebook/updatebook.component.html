@@ -1,0 +1,112 @@
+<style>
+    #masthead {
+    min-height:199px;
+    background-image: url(assets/images/img9.jpg) !important;
+  
+    /* background-color:#004403; */
+    color:#aaaacc;
+  }
+  
+    </style>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Update Book.
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            <div class="panel">
+              <div class="panel-body">
+                  <div class="registration-form">
+                  <form class="login"  (ngSubmit)="editBook()">
+                      <div class="form-group">
+                        <h3>Please change this form to update the book.</h3>
+                      </div>
+                     <br>
+                          <div class="form-group">
+                        
+                        <input type="text" name="title"  class="form-control item" id="FirstName" [(ngModel)]="bookitem.title" placeholder="Name of the book">
+                       
+                        <label id="FirstName1"></label>
+                      </div>
+                      <div class="form-group">
+                        
+                        <input type="text" name="genere" class="form-control item" id="LastName" [(ngModel)]="bookitem.genre" placeholder="Genre of the Book">
+                      
+                        <label id="LastName1"></label>
+                      </div>
+                      <div class="form-group">
+                        
+                        <input type="text" name="author" class="form-control item" id="Author" [(ngModel)]="bookitem.author" placeholder="Author">
+                      
+                        <label id="Author1"></label>
+                      </div>
+                      <div class="form-group">
+                        
+                        <input type="text" name="discription" class="form-control item" id="discription" [(ngModel)]="bookitem.description" placeholder="Add a discription about book">
+                      
+                        <label id="discription1"></label>
+                      </div>
+                      <div class="form-group">
+                        <label>Insert an Image URL</label>
+                      <input type="text" name="image" class="form-control item" id="img" [(ngModel)]="bookitem.imageUrl" >
+                        
+                      
+                        <label id="img1"></label>
+                      </div>
+                          
+                      <div class="form-group"> 
+                          <div class="botton">
+                              <button type="submit" class="btn btn-block create-account" id="loginBtn">Update Book</button>
+                          </div>
+                      </div>
+                    </form>
+                  </div>
+                
+            
+            
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>

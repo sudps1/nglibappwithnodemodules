@@ -1,0 +1,172 @@
+<style>
+    #masthead {
+    min-height:199px;
+    background-image: url(assets/images/img9.jpg) !important;
+  
+    /* background-color:#004403; */
+    color:#aaaacc;
+  }
+  
+    </style>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Sign-Up
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+              <div class="registration-form">
+              <form class="login" method="POST" #userdetail="ngForm" action = "/signup" (ngSubmit)="AddUser()">
+                  <div class="form-group">
+                    <h3>Please fill this form to create an account.</h3>
+                  </div>
+                 <br>
+
+
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" name="fname"  class="form-control item" [(ngModel)]="UserDetail.firstname" 
+                         id="FirstName" #fname="ngModel" placeholder="Enter your first name" required>
+                      <label *ngIf="fname.invalid && (fname.dirty || fname.touched) && fname.errors.required" class="alert alert-danger">
+                      <p>First Name is required.</p>                             
+                      </label>
+                    </div>
+                  
+                  <div class="form-group">
+                    <label>Last Name</label>                    
+                    <input type="text" name="lname" class="form-control item" [(ngModel)]="UserDetail.lastnane" 
+                    id="LastName" #lname="ngModel" placeholder="Enter your last name" required>
+                      <label *ngIf="lname.invalid && (lname.dirty || lname.touched) && lname.errors.required" class="alert alert-danger">
+                      <p>Last Name is required.</p>                             
+                      </label>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>User Name</label>                    
+                    <input type="text" name="username"  class="form-control item" [(ngModel)]="UserDetail.username" 
+                    id="UserName" #username="ngModel" placeholder="Choose a user name" required minlength="4">
+                    <label *ngIf="username.invalid && (username.dirty || username.touched) && username.errors.required" class="alert alert-danger">
+                      <p>User name is required.</p>                             
+                    </label>
+                    <label *ngIf="username.invalid && username.errors.minlength" class="alert alert-danger">
+                      <p>User name must be at least 4 characters long.</p>               
+                    </label>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>E-Mail</label>                   
+                    <input type="text" name="email" class="form-control item" [(ngModel)]="UserDetail.email" 
+                    id="Mail" #email="ngModel" placeholder="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <label *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.required" class="alert alert-danger">
+                      <p>Email is required.</p>                             
+                    </label>
+                    <label *ngIf="email.invalid && email.errors.pattern" class="alert alert-danger">
+                      <p>Enter a valid Email</p>               
+                    </label>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Mobile Number</label>          
+                    <input type="text" name="mno" class="form-control item" [(ngModel)]="UserDetail.mobno" 
+                    id="Mobile" #mobnum="ngModel" placeholder="Enter 10 digit mobile number " pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
+                    <label *ngIf="mobnum.invalid && (mobnum.dirty || mobnum.touched) && mobnum.errors.required" class="alert alert-danger">
+                      <p>Mobile number is required.</p>                             
+                    </label>
+                    <label *ngIf="mobnum.invalid && mobnum.errors.pattern" class="alert alert-danger">
+                      <p>Enter a valid Mobile number</p>               
+                    </label>
+                  </div>
+
+                  <div class="form-group">
+                      <label>Password</label>
+                      <!-- <span id="passreq">[ ! ]</span>
+                       <div id="myModal" class="modal">
+                      <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h5>Password Requirment</h5>
+                            <ul>
+                              <li>Minimum 8 characters.</li>
+                              <li>Atleast one numeric value.</li>
+                              <li>Atleast one small letter.</li>
+                              <li>Atleast one capital letter.</li><br>
+                              <p>Atleast one special character. (Recommended)</p>
+                            
+                            </ul>
+                          </div>
+            
+                    </div> -->
+                   
+                    <input type="password" name="password"  class="form-control item" [(ngModel)]="UserDetail.password"
+                    id="password" #psw="ngModel" placeholder="Enter password" required minlength="8">
+                    <label *ngIf="psw.invalid && (psw.dirty || psw.touched) && psw.errors.required" class="alert alert-danger">
+                      <p>Password is required.</p>                             
+                    </label>
+                    <label *ngIf="psw.invalid && psw.errors.minlength" class="alert alert-danger">
+                      <p>User name must be at least 8 characters long.</p>               
+                    </label>
+                  </div>
+
+
+                 
+                
+                  
+                         
+                      
+                  <div class="form-group"> 
+                      <div class="botton">
+                          <button type="submit" [disabled]="userdetail.form.invalid" class="btn btn-block create-account" id="loginBtn">Create Account</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            
+            
+            
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+  <hr>

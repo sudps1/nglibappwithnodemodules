@@ -1,0 +1,43 @@
+
+  
+  
+  h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+    font-family:'Oswald',arial narrow,sans-serif;
+  }
+  
+  #masthead h1 {
+    font-size: 80px;
+    line-height: 1;
+    color:#fefeff;
+    margin-top:50px;
+  }
+  .top-spacer {
+    background-color:#ffffff;
+    height:40px;
+  }
+  
+  #masthead .well {
+    margin-top:31px;
+    background-color: rgb(255, 255, 255,0);
+    border: none;
+    min-height:127px;
+  }
+  
+  #topPanel {
+    padding-top:0px;
+    padding-left:22px;
+    padding-right:22px;
+  }
+  #topPanel .panel-body {
+    padding-top:0px;
+  }
+  @media screen and (min-width: 768px) {
+    #masthead h1 {
+      font-size: 80px;
+    }
+  }
+ #loginBtn{
+   width: 30%;
+   margin-left: 35%;
+   
+ }
